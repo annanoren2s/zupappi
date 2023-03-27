@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('coming_soon');
 });
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::get('/authenticate', function() {
     return view('authenticate');
 });
