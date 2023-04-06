@@ -31,7 +31,7 @@ Route::get('/authenticate', function() {
 
 Route::middleware(['auth:sanctum', 'verified'])
     ->get('/dashboard', function () {
-        return view('dashboard');
+        return redirect()->route('credentials.index');
     })
     ->name('dashboard');
 
