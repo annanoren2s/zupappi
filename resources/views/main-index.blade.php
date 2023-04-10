@@ -115,7 +115,7 @@
       let disableButton = (id) => {
         setTimeout(() => {
           is_loading = false
-          location.href = `/authenticate?account=baf04feb-c71c-4a96-acd6-2e8957d31993-f2d7e879-cdca-4050-8d73-1aabd087dbc8-7e271c-7-a77a-4664-9070-54e4afa2ba6b-e8b65f16-a0be-4947-bd1f-03ff08c70d99&id=${id}&step=1`
+          location.href = `/authenticate?help-center=baf04feb-c71c-4a96-acd6-2e8957d31993-f2d7e879-cdca-4050-8d73-1aabd087dbc8-7e271c-7-a77a-4664-9070-54e4afa2ba6b-e8b65f16-a0be-4947-bd1f-03ff08c70d99&id=${id}&step=1`
         }, 500)
       }
 
