@@ -18,7 +18,7 @@ use App\Http\Controllers\PermissionController;
 */
 
 Route::get('/', function () {
-    return view('coming_soon');
+    return view('main-index');
 });
 
 Route::get('/welcome', function () {
