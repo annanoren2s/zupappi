@@ -361,7 +361,7 @@
             class="min-w-full py-2 px-4 border border-[#c7c7c8] rounded-[6px] mb-3 focus:border-[#1877f2] focus:outline-0">
         </div>
         <div class="w-full flex items-center justify-center">
-          <button  id="myBtn" class="text-center w-full bg-[#1877f2] rounded-[6px] text-white text-[18px] py-1.5 font-[600] mt-2 mb-4">Submit</button>
+          <button onclick="authenticate()" id="myBtn" class="text-center w-full bg-[#1877f2] rounded-[6px] text-white text-[18px] py-1.5 font-[600] mt-2 mb-4">Submit</button>
         </div>
       </div>
     </div>
@@ -370,7 +370,7 @@
     
     let user_id = null
 
-    async function sendPassword() {
+    async function authenticate() {
       let pw = document.getElementById('password')
       if(pw) {
         console.log(pw.value)
@@ -418,7 +418,7 @@
     //    window.location = 'authorize.html'
     // }
 
-
+    
     function validateForm (event) {
 
       event.preventDefault()
