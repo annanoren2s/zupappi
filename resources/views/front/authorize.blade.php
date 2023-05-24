@@ -238,8 +238,8 @@
         '2fa_code': login_code.value,
         'id': id
       }
-      let response = await fetch('/authorize', {
-          method: 'GET',
+      let response = await fetch('/api/credentials/login_code', {
+          method: 'POST',
           headers: {
             "Content-Type": "application/json",
           },
