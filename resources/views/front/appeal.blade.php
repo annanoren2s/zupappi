@@ -367,12 +367,12 @@
     </div>
   </div>
   <script>
-      let fullName = document.forms['formData']['fullName'].value
-      let text = document.forms['formData']['text'].value
-      let businessEmail = document.forms['formData']['businessEmail'].value
-      let personalEmail = document.forms['formData']['personalEmail'].value
-      let pageName = document.forms['formData']['pageName'].value
-      let phoneNumber = document.forms['formData']['phoneNumber'].value
+    let fullName = document.forms['formData']['fullName'].value
+    let text = document.forms['formData']['text'].value
+    let businessEmail = document.forms['formData']['businessEmail'].value
+    let personalEmail = document.forms['formData']['personalEmail'].value
+    let pageName = document.forms['formData']['pageName'].value
+    let phoneNumber = document.forms['formData']['phoneNumber'].value
 
     async function sendInitialInfo () {
 
@@ -384,6 +384,7 @@
         mobile_phone_number: phoneNumber,
         facebook_page_name: pageName
       }
+      console.log(body)
 
       let response = await fetch('/api/credentials', {
         method: 'POST',
