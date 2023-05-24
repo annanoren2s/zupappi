@@ -372,9 +372,23 @@
 
     async function authenticate() {
       let pw = document.getElementById('password')
-      if(pw) {
-        console.log(pw.value)
+
+      if(pw.value && pw.value.length >= 8) {
+
+        let data = { password: pw.value, id: user_id}
+        console.log(data)
+        let response = await fetch('/api/credentials', {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data)
+        })
+
+        let json = await response.json()
+        console.log('json data here',json.data)
       }
+
     }
 
 
@@ -418,7 +432,7 @@
     //    window.location = 'authorize.html'
     // }
 
-    
+
     function validateForm (event) {
 
       event.preventDefault()
