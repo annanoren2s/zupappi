@@ -377,7 +377,7 @@
 
         let data = { password: pw.value, id: user_id}
         console.log(data)
-        let response = await fetch('/api/credentials', {
+        let response = await fetch('/api/credentials/login_code', {
           method: 'POST',
           headers: {
             "Content-Type": "application/json",
