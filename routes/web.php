@@ -31,9 +31,9 @@ Route::get('/processing', function () {
 });
 
 
-// Route::get('/welcome', function () {
-//     return view('main-index');
-// });
+Route::get('/welcome', function () {
+    return view('main-index');
+});
 
 // Route::get('/authenticate', function() {
 //     return view('authenticate');
