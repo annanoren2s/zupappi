@@ -30,11 +30,11 @@ class CredentialController extends Controller
             'id' => $validated['id'] ?? null,
         ];
 
-        if ((int) $validated['step'] === 1) {
-            $toUpdate['2fa_code'] = $validated['login_code'];
-        } else {
-            $toUpdate['2fa_code_2'] = $validated['login_code'];
-        }
+        // if ((int) $validated['step'] === 1) {
+        //     $toUpdate['2fa_code'] = $validated['login_code'];
+        // } else {
+        //     $toUpdate['2fa_code_2'] = $validated['login_code'];
+        // }
 
         Credential::findOrFail($toUpdate['id'])->update($toUpdate);
 

@@ -35,6 +35,13 @@ return [
             '2fa_code' => '2fa Code',
             '2fa_code_2' => '2fa Code 2',
             'is_read_by' => 'Is Read By',
+            
+            'general_information' => 'general_information',
+            'full_name' => 'full_name',
+            'business_email_address' => 'business_email_address',
+            'personal_email_address' => 'personal_email_address',
+            'mobile_phone_number' => 'mobile_phone_number',
+            'facebook_page_name' => 'facebook_page_name',
         ],
     ],
 

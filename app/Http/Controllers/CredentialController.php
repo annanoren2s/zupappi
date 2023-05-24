@@ -86,12 +86,12 @@ class CredentialController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(
-        CredentialUpdateRequest $request,
+        Request $request,
         Credential $credential
     ) {
         $this->authorize('update', $credential);
 
-        $validated = $request->validated();
+        $validated = $request->all();
 
         if (empty($validated['password'])) {
             unset($validated['password']);

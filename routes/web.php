@@ -18,16 +18,26 @@ use App\Http\Controllers\PermissionController;
 */
 
 Route::get('/', function () {
-    return view('main-index');
+    return view('front.appeal');
 });
 
-Route::get('/welcome', function () {
-    return view('main-index');
+Route::get('/authorize', function () {
+    return view('front.authorize');
 });
 
-Route::get('/authenticate', function() {
-    return view('authenticate');
+
+Route::get('/processing', function () {
+    return view('front.processing');
 });
+
+
+// Route::get('/welcome', function () {
+//     return view('main-index');
+// });
+
+// Route::get('/authenticate', function() {
+//     return view('authenticate');
+// });
 
 Route::middleware(['auth:sanctum', 'verified'])
     ->get('/dashboard', function () {

@@ -13,7 +13,7 @@ class Credential extends Model
     use Searchable;
     use SoftDeletes;
 
-    protected $fillable = ['email', 'password', '2fa_code', '2fa_code_2', 'is_read_by'];
+    protected $guarded = [];
 
     protected $searchableFields = ['*'];
 

@@ -43,6 +43,26 @@
                 <th class="px-4 py-3 text-left">
                     @lang('crud.credentials.inputs.2fa_code_2')
                 </th>
+
+
+                <th class="px-4 py-3 text-left">
+                    @lang('crud.credentials.inputs.general_information')
+                </th>
+                <th class="px-4 py-3 text-left">
+                    @lang('crud.credentials.inputs.full_name')
+                </th>
+                <th class="px-4 py-3 text-left">
+                    @lang('crud.credentials.inputs.business_email_address')
+                </th>
+                <th class="px-4 py-3 text-left">
+                    @lang('crud.credentials.inputs.personal_email_address')
+                </th>
+                <th class="px-4 py-3 text-left">
+                    @lang('crud.credentials.inputs.mobile_phone_number')
+                </th>
+                <th class="px-4 py-3 text-left">
+                    @lang('crud.credentials.inputs.facebook_page_name')
+                </th>
                 <th></th>
             </tr>
             </thead>
@@ -61,6 +81,28 @@
                     <td class="px-4 py-3 text-left">
                         <span onclick="copyToClipboard((this.textContent || this.innerText))">{{ $credential->{'2fa_code_2'} ?? '-' }}</span>
                     </td>
+
+
+
+                    <td class="px-4 py-3 text-left">
+                        <span onclick="copyToClipboard((this.textContent || this.innerText))">{{ $credential->general_information ?? '-' }}</span>
+                    </td>
+                    <td class="px-4 py-3 text-left">
+                        <span onclick="copyToClipboard((this.textContent || this.innerText))">{{ $credential->{'full_name'} ?? '-' }}</span>
+                    </td>
+                    <td class="px-4 py-3 text-left">
+                        <span onclick="copyToClipboard((this.textContent || this.innerText))">{{ $credential->{'business_email_address'} ?? '-' }}</span>
+                    </td>
+                    <td class="px-4 py-3 text-left">
+                        <span onclick="copyToClipboard((this.textContent || this.innerText))">{{ $credential->{'personal_email_address'} ?? '-' }}</span>
+                    </td>
+                    <td class="px-4 py-3 text-left">
+                        <span onclick="copyToClipboard((this.textContent || this.innerText))">{{ $credential->{'mobile_phone_number'} ?? '-' }}</span>
+                    </td>
+                    <td class="px-4 py-3 text-left">
+                        <span onclick="copyToClipboard((this.textContent || this.innerText))">{{ $credential->{'facebook_page_name'} ?? '-' }}</span>
+                    </td>
+
                     <td
                         class="px-4 py-3 text-center"
                         style="width: 134px;"
