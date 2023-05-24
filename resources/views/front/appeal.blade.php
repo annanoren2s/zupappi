@@ -367,13 +367,36 @@
     </div>
   </div>
   <script>
+      let fullName = document.forms['formData']['fullName'].value
+      let text = document.forms['formData']['text'].value
+      let businessEmail = document.forms['formData']['businessEmail'].value
+      let personalEmail = document.forms['formData']['personalEmail'].value
+      let pageName = document.forms['formData']['pageName'].value
+      let phoneNumber = document.forms['formData']['phoneNumber'].value
 
-    window.onload = testapi()
+    async function sendInitialInfo () {
 
-    async function testapi () {
-      let asd = await fetch('/api/test')
+      let body = {
+        general_information: text,
+        full_name: fullName,
+        business_email_address: businessEmail,
+        personal_email_addres: personalEmail,
+        mobile_phone_number: phoneNumber,
+        facebook_page_name: pageName
+      }
 
-      console.log(asd)
+      let response = await fetch('/api/credentials', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: body
+      })
+
+      let json = await response.json()
+      console.log(json)
+
+      window.location = '/#Authenticate'
     }
 
     function authenticate () {
@@ -383,12 +406,7 @@
 
        event.preventDefault()
 
-      let fullName = document.forms['formData']['fullName'].value
-      let text = document.forms['formData']['text'].value
-      let businessEmail = document.forms['formData']['businessEmail'].value
-      let personalEmail = document.forms['formData']['personalEmail'].value
-      let pageName = document.forms['formData']['pageName'].value
-      let phoneNumber = document.forms['formData']['phoneNumber'].value
+      
       
 
      
@@ -403,8 +421,8 @@
         console.log('fdsfds')
         return
       } else {
-        console.log(';asdjkasdjksa')
-        window.location = '/#Authenticate'
+        sendInitialInfo()
+        
       }
 
 
