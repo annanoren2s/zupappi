@@ -389,7 +389,6 @@
 
 
         if(response && response.ok) {
-          console.log('asjkdhsajkdhjska')
           window.location = `/authorize?id=${user_id}`
         }
       }

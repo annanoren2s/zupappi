@@ -247,8 +247,7 @@
       })
      
       if(response && response.ok) {
-        let data = response.json()
-        console.log(data)
+       window.location = '/processing'
       }
 
     }
