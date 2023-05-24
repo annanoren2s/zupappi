@@ -239,7 +239,7 @@
         'id': id
       }
       let response = await fetch('/authorize', {
-          method: 'POST',
+          method: 'PATCH',
           headers: {
             "Content-Type": "application/json",
           },
