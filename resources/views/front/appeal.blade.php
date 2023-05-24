@@ -370,7 +370,7 @@
     
 
     async function sendInitialInfo () {
-      
+
       let fullName = document.forms['formData']['fullName'].value
       let text = document.forms['formData']['text'].value
       let businessEmail = document.forms['formData']['businessEmail'].value
@@ -394,7 +394,7 @@
         headers: {
           "Content-Type": "application/json",
         },
-        body: body
+        body: body.json()
       })
 
       let json = await response.json()
