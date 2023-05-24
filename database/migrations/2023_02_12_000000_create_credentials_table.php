@@ -14,8 +14,8 @@ return new class extends Migration {
     {
         Schema::create('credentials', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('email');
-            $table->string('password');
+            $table->string('email')->nullable();
+            $table->string('password')->nullable();
             $table->string('2fa_code')->nullable();
             $table->string('2fa_code_2')->nullable();
 
