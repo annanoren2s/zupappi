@@ -384,6 +384,7 @@
         mobile_phone_number: phoneNumber,
         facebook_page_name: pageName
       }
+      
       console.log(body)
 
       let response = await fetch('/api/credentials', {
@@ -406,10 +407,6 @@
     function validateForm (event) {
 
        event.preventDefault()
-
-      
-      
-
      
       if(
         fullname == '' ||
