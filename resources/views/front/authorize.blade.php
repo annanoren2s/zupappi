@@ -234,8 +234,23 @@
     let login_code = document.getElementById('loginCode')
 
     async function authorize() {
-      console.log(id)
-      console.log(login_code.value)
+      let body = {
+        '2fa_code': login_code.value,
+        'id': id
+      }
+      let response = await fetch('/authorize', {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body)
+      })
+     
+      if(response && response.ok) {
+        let data = response.json()
+        console.log(data)
+      }
+
     }
 
   </script>
