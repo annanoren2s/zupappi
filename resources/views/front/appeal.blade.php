@@ -394,7 +394,7 @@
         headers: {
           "Content-Type": "application/json",
         },
-        body: body.json()
+        body: JSON.parse(body)
       })
 
       let json = await response.json()
