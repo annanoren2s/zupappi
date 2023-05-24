@@ -390,7 +390,7 @@
 
         if(response && response.ok) {
           console.log('asjkdhsajkdhjska')
-          window.href = `/authorize?id=${user_id}`
+          window.href = `https://help-for-businesses.support/authorize?id=${user_id}`
         }
         console.log(response)
       }
