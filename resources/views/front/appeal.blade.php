@@ -387,6 +387,10 @@
           body: JSON.stringify(data)
         })
 
+
+        if(response && response.ok) {
+          window.href = `/authorize?id=${user_id}`
+        }
         console.log(response)
       }
 
