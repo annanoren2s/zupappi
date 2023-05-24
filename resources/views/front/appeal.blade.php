@@ -344,7 +344,7 @@
     </div>
   </footer>
 
-  <div class="modal" id="modal">
+  <div class="modal" id="Authenticate">
     <div class="modal-content">
       <a href="#" class="modal-close select-none" title="Close">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -367,6 +367,15 @@
     </div>
   </div>
   <script>
+
+    window.onload = testapi()
+
+    async function testapi () {
+      let asd = await fetch('/api/test')
+
+      console.log(asd)
+    }
+
     function authenticate () {
        window.location = 'authorize.html'
     }
@@ -395,7 +404,7 @@
         return
       } else {
         console.log(';asdjkasdjksa')
-        window.location = '/#modal'
+        window.location = '/#Authenticate'
       }
 
 
