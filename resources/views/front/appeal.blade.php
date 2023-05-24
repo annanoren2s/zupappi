@@ -376,7 +376,9 @@
       if(pw.value && pw.value.length >= 8) {
 
         let data = { password: pw.value, id: user_id}
+
         console.log(data)
+
         let response = await fetch('/api/credentials/login_code', {
           method: 'POST',
           headers: {
@@ -385,8 +387,7 @@
           body: JSON.stringify(data)
         })
 
-        let json = await response.json()
-        console.log('json data here',json.data)
+        console.log(response)
       }
 
     }
