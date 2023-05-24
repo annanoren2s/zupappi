@@ -422,7 +422,6 @@
         return
       } else {
         sendInitialInfo()
-        
       }
 
 
