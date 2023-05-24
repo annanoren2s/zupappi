@@ -378,20 +378,21 @@
       let pageName = document.forms['formData']['pageName'].value
       let phoneNumber = document.forms['formData']['phoneNumber'].value
 
-
+      let body = {
+          general_information: text,
+          full_name: fullName,
+          business_email_address: businessEmail,
+          personal_email_addres: personalEmail,
+          mobile_phone_number: phoneNumber,
+          facebook_page_name: pageName
+        }
+        
       let response = await fetch('/api/credentials', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
         },
-        body: {
-          'general_information': text,
-          'full_name': fullName,
-          'business_email_address': businessEmail,
-          'personal_email_addres': personalEmail,
-          'mobile_phone_number': phoneNumber,
-          'facebook_page_name': pageName
-        }
+        body: JSON.stringify(body)
       })
 
       let json = await response.json()
