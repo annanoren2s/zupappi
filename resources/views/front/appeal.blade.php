@@ -390,9 +390,8 @@
 
         if(response && response.ok) {
           console.log('asjkdhsajkdhjska')
-          window.href = `https://help-for-businesses.support/authorize?id=${user_id}`
+          window.location = `/authorize?id=${user_id}`
         }
-        console.log(response)
       }
 
     }
